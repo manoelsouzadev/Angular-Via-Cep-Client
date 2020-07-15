@@ -1,0 +1,15 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <input type="text" name="cep" ngModel/>
+  <button type="submit">Consultar</button>
+  </form>
+  <ng-container *ngIf="cep">
+    <p>{{ cep.cep }}</p>
+    <p>{{ cep.logradouro }}</p>
+    <p>{{ cep.complemento }}</p>
+    <p>{{ cep.bairro }}</p>
+    <p>{{ cep.localidade }}</p>
+    <p>{{ cep.uf }}</p>
+    <p>{{ cep.unidade }}</p>
+    <p>{{ cep.ibge }}</p>
+    <p>{{ cep.gia }}</p>
+  </ng-container>
